@@ -30,6 +30,7 @@
       "react/jsx-one-expression-per-line": 0,
       "react/destructuring-assignment": 0,
       "comma-dangle": [2, "never"],
+      "object-curly-newline": 0,
       "semi": [2, "never"]
     }
 }
