@@ -1,12 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ErrorBoundary } from 'react-error-boundary'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { ErrorBoundaryPage } from './pages'
+import { AppProvider } from './contexts'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ErrorBoundary FallbackComponent={ErrorBoundaryPage}>
+    <AppProvider>
+      <App />
+    </AppProvider>
+  </ErrorBoundary>,
   document.getElementById('root')
 )
 
