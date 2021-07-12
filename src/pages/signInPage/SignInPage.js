@@ -1,4 +1,4 @@
-import { Form, Input, Button, Image } from 'antd'
+import { Form, Input, Button, Image, Typography } from 'antd'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
@@ -7,7 +7,6 @@ import { useAuth } from '../../contexts/authContext'
 import logo from '../../assets/images/logo.png'
 import { focusErrorInForm } from '../../utils'
 import { useDocumentTitle } from '../../hooks'
-import { MyLabel } from '../../components'
 
 export function SignInPage() {
   const { t } = useTranslation()
@@ -35,7 +34,7 @@ export function SignInPage() {
             <Logo src={logo} preview={false} />
           </Form.Item>
           <Form.Item
-            label={<MyLabel required>{t('signIn.email')}</MyLabel>}
+            label={<Typography.Text required>{t('signIn.email')}</Typography.Text>}
             name="email"
             rules={[{
               required: true,
@@ -48,7 +47,7 @@ export function SignInPage() {
             <Input maxLength={100} />
           </Form.Item>
           <Form.Item
-            label={<MyLabel required>{t('signIn.password')}</MyLabel>}
+            label={<Typography.Text required>{t('signIn.password')}</Typography.Text>}
             name="password"
             rules={[{
               required: true,
